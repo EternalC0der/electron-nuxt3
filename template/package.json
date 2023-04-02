@@ -1,0 +1,42 @@
+{
+  "name": "electron-nuxt3",
+  "author": "EternalC0DER",
+  "email": "s.eternalcoder@gmail.com",
+  "description": "Nuxt3 + Electron & More",
+  "version": "1.0.0",
+  "private": true,
+  "main": ".output/electron/background.js",
+  "scripts": {
+    "dev": "nuxt dev -o",
+    "build": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare && electron-builder install-app-deps",
+    "transpile-electron": "tsc -p ./electron --outDir .output/electron",
+    "dev:electron": "NODE_ENV=development concurrently --kill-others \"nuxt dev\" \"tsc-watch -p ./electron --outDir .output/electron --onSuccess 'wait-on http://localhost:3000 && electron ./.output/electron/background.js'\"",
+    "dev:electron:win": "set NODE_ENV=development& concurrently --kill-others \"nuxt dev\" \"tsc-watch -p ./electron --outDir .output/electron --onSuccess run.electron\"",
+    "build:electron": "yarn build && yarn transpile-electron && node build.js"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/express": "^4.17.17",
+    "concurrently": "^8.0.1",
+    "electron": "^23.2.1",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "^3.3.3",
+    "prettier": "^2.8.7",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^5.0.3",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.7",
+    "electron-log": "^5.0.0-beta.16",
+    "electron-updater": "^5.3.0",
+    "express": "^4.18.2"
+  }
+}
