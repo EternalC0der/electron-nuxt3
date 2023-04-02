@@ -40,7 +40,7 @@ code .
 
 ```bash
 # Start the app in development mode (in electron)
-npm run electron:dev
+npm run dev:electron
 
 # Start the app in development mode (in browser)
 npm run dev
