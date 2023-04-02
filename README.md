@@ -1,14 +1,14 @@
 # electorn-nuxt3
 
-
+🚀 The perfect Electron + Nuxt3 quick start that you can deploy with or without electron!
 
 ## ✅ Features
 
 -   Perfect structure for parallel development of electron and nuxt 🏢
--   Deployable with electron or/and without electron! 🎩
+-   Deploy with or without electron! 🚀
 -   Typescript (you can use javascript too) 📍
 -   electron-updater 🎉
--   custom electron-builder config 🚀
+-   custom electron-builder config 🎩
 -   Latest versions of `electron` and `nuxt` ✨
 -   Great DX and Extensibility 🍕
 -   Parallel transpilation and hot-reloading 🧪
@@ -19,7 +19,7 @@
 
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/EternalC0der/electron-nuxt3.git
 
 # Change directory to the template
 cd electron-nuxt3/template
@@ -29,6 +29,9 @@ npm install
 
 # Start the app in development mode (in electron)
 npm run electron:dev
+
+# Fire up vscode
+code .
 ```
 
 # 📡 Usage
