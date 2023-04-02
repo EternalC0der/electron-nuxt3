@@ -28,7 +28,7 @@ cd electron-nuxt3/template
 npm install
 
 # Start the app in development mode (in electron)
-npm run electron:dev
+npm run dev:electron
 
 # Fire up vscode
 code .
