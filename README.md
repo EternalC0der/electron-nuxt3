@@ -29,6 +29,7 @@ npm install
 
 # Start the app in development mode (in electron)
 npm run dev:electron
+# Note: Use 'npm run dev:electron:win' if you're using a windows machine!
 
 # Fire up vscode
 code .
@@ -46,7 +47,7 @@ npm run dev:electron
 npm run dev
 ```
 
-### Production
+### Build
 
 ```bash
 # Generate static build
