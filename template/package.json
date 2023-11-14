@@ -12,7 +12,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && electron-builder install-app-deps",
     "transpile-electron": "tsc -p ./electron --outDir .output/electron",
-    "dev:electron": "NODE_ENV=development concurrently --kill-others \"nuxt dev\" \"tsc-watch -p ./electron --outDir .output/electron --onSuccess 'wait-on http://localhost:3000 && electron ./.output/electron/background.js'\"",
+    "dev:electron": "NODE_ENV=development concurrently --kill-others \"nuxt dev\" \"tsc-watch -p ./electron --outDir .output/electron --onSuccess 'electron ./.output/electron/background.js'\"",
     "dev:electron:win": "set NODE_ENV=development& concurrently --kill-others \"nuxt dev\" \"tsc-watch -p ./electron --outDir .output/electron --onSuccess run.electron\"",
     "build:electron": "yarn build && yarn transpile-electron && node build.js"
   },
